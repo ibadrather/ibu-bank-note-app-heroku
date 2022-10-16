@@ -6,6 +6,8 @@ from api_utils import get_prediction, BankNote
 # FastAPI app
 app = FastAPI()
 
+print("murad hooon")
+
 
 @app.get("/")
 def index():
