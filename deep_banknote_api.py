@@ -17,7 +17,9 @@ def predict(data: BankNote):
     """
     Function to predict bank note authenticity
     """
-    data = np.array([data.variance, data.skewness, data.curtosis, data.entropy], dtype=np.float32)
+    data = np.array(
+        [data.variance, data.skewness, data.curtosis, data.entropy], dtype=np.float32
+    )
     prediction = get_prediction(data)
 
     if prediction == 1:
@@ -25,11 +27,14 @@ def predict(data: BankNote):
     else:
         return {"Prediction": ":) The bank note is Real"}
 
+
 # uvicorn deep_banknote_api:app --reload
 
 
 def run_app():
-    config = uvicorn.Config("deep_banknote_api:app", port=8000, log_level="info", reload=False)
+    config = uvicorn.Config(
+        "deep_banknote_api:app", port=8000, log_level="info", reload=False
+    )
     server = uvicorn.Server(config)
     server.run()
 

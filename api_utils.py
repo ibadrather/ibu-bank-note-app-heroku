@@ -13,6 +13,7 @@ def get_prediction(data):
     ort_outs = ort_session.run(None, ort_inputs)[0]
     return ort_outs.argmax()
 
+
 class BankNote(BaseModel):
     variance: float
     skewness: float
