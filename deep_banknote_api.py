@@ -31,13 +31,13 @@ def predict(data: BankNote):
 # uvicorn deep_banknote_api:app --reload
 
 
-def run_app():
-    config = uvicorn.Config(
-        "deep_banknote_api:app", port=8000, log_level="info", reload=False
-    )
-    server = uvicorn.Server(config)
-    server.run()
+# def run_app():
+#     config = uvicorn.Config(
+#         "deep_banknote_api:app", port=8000, log_level="info", reload=False
+#     )
+#     server = uvicorn.Server(config)
+#     server.run()
 
 
-if __name__ == "__main__":
-    run_app()
+# if __name__ == "__main__":
+#     run_app()
