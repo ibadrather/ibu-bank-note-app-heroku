@@ -9,7 +9,9 @@ app = FastAPI()
 
 @app.get("/")
 def index():
-    return {"Message": "Go to /docs endpoint to get predictions"}
+    return {
+        "Message": "Go to /docs endpoint to get predictions. Let's see if it is working."
+    }
 
 
 @app.post("/predict")
